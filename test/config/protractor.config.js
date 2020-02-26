@@ -19,7 +19,7 @@ exports.config = {
   baseUrl: 'localhost',
 
   mochaOpts: {
-    reporter: 'spec',
+    reporter: 'mochawesome',
     timeout: 70000,
   },
 };

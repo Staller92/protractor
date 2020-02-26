@@ -65,3 +65,19 @@ typings/
 .idea
 .idea/
 out
+
+# Mocha
+.mochawesome-report
+
+/mochawesome-report/assets/app.css
+/mochawesome-report/assets/app.js
+/mochawesome-report/assets/MaterialIcons-Regular.woff
+/mochawesome-report/assets/MaterialIcons-Regular.woff2
+/mochawesome-report/mochawesome.html
+/mochawesome-report/mochawesome.json
+/mochawesome-report/assets/roboto-light-webfont.woff
+/mochawesome-report/assets/roboto-light-webfont.woff2
+/mochawesome-report/assets/roboto-medium-webfont.woff
+/mochawesome-report/assets/roboto-medium-webfont.woff2
+/mochawesome-report/assets/roboto-regular-webfont.woff
+/mochawesome-report/assets/roboto-regular-webfont.woff2
