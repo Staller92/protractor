@@ -1,29 +1,21 @@
 const BasePage = require('./basePage');
-const SearchResultsPage = require('./searchResultsPage');
+const Element = require('./element');
 
 class MainPage extends BasePage {
   constructor() {
     super();
     this.url = 'https://shop.westerndigital.com';
-    this.searchButtonXpath = '//*[contains(@class,"searchbutton")]';
-    this.searchInputXpath = '//*[@id="searchright"]';
+    this.searchButton = new Element('searchButton', '//*[contains(@class,"searchbutton")]');
+    this.searchInput = new Element('searchInput', '//*[@id="searchright"]');
   };
 
   async open() {
-    await super.open(this.url);
-    return this;
+    return super.open(this.url);
   };
 
-  async clickOnSearchButton() {
-    await this.click(by.xpath(this.searchButtonXpath));
-    return this;
-  };
-
-  async inputSearchField(text) {
-    const searchInput = await element(by.xpath(this.searchInputXpath));
-    await searchInput.sendKeys(text);
-    await searchInput.submit();
-    return new SearchResultsPage();
+  async search(text) {
+    await this.searchInput.typeText(text);
+    return this.searchInput.submit();
   };
 }
 

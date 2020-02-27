@@ -1,20 +1,18 @@
 const Header = require('./header');
+const LoginForm = require('./loginForm');
 
 class BasePage {
   constructor() {
     this.Header = new Header();
+    this.LoginForm = new LoginForm();
   }
 
   async open(url) {
     return browser.get(url);
   };
 
-  async click(locator) {
-    return await element(locator).click();
-  };
-
   async getCurrentUrl() {
-    return await browser.getCurrentUrl();
+    return browser.getCurrentUrl();
   };
 }
 
