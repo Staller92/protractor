@@ -20,6 +20,5 @@ describe('Log in tests', function() {
     const errorMessage = await loginForm.loginErrorMessage.getText();
     expect(errorMessage, 'Error message is not correct').to.be.equal('Your username or password was incorrect.');
   });
-
 });
 
